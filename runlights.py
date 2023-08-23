@@ -39,15 +39,12 @@ signal.signal(signal.SIGINT, signal_handler)
 
 def bulb_update(name, id, ip, localkey):
         global skip_frame
-        print("Enter")
         b = tinytuya.BulbDevice(
                 dev_id=id,
                 address=ip,      
                 local_key=localkey, 
                 version=3.3)
         
-        data = b.status()
-        print('Dictionary %r' % data)
         b.turn_on()
 
         while(True):
@@ -112,5 +109,7 @@ f = open("devices.json", "r")
 config = json.loads(f.read())
 _thread.start_new_thread(bulb_update,("Main",config[0]['id'],"Auto",config[0]['key']))
 
-while not stop: 
+while not stop:
         pass
+#sleep to allow time for light to turn off
+time.sleep(light_update_wait)
