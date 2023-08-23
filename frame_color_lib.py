@@ -5,7 +5,7 @@ Helper methods and
 Most relevand color algorithm
 
 From light-sync
-https://github.com/Da7oomHTPC/light-sync
+https://github.com/digital-concrete/light-sync/
 """
 
 from __future__ import print_function

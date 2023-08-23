@@ -6,7 +6,7 @@ http://www.developers.meethue.com/documentation/color-conversions-rgb-xy
 Copyright (c) 2016 Benjamin Knight / MIT License.
 
 From light-sync
-https://github.com/Da7oomHTPC/light-sync
+https://github.com/digital-concrete/light-sync/
 """
 import math
 import random
